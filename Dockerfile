@@ -13,8 +13,8 @@ RUN bundle install
 # Copie le reste du code
 COPY . /app
 
-# Expose le port sur lequel Sinatra s'exécute
-EXPOSE 4567
+# Expose le port 8080
+EXPOSE 8080
 
 # Démarre l'application
 CMD ["ruby", "app.rb"]
