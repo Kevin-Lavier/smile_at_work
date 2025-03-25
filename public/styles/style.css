@@ -1,0 +1,47 @@
+/* Styles for the homepage background */
+body.home {
+  /* Set a semi-transparent background color using HSLA */
+  background-color: hsla(200, 40%, 30%, 0.4);
+  
+  /* Define multiple background images (stacked) using absolute paths relative to the public folder */
+  background-image:   
+    url('/images/black_trees.png'),
+    url('/images/green_trees.png'),
+    url('/images/white_clouds.png'),
+    url('/images/mountains.png'),
+    url('/images/white_clouds_bis.png');
+  
+  /* Repeat the images horizontally */
+  background-repeat: repeat-x;
+  
+  /* Set the initial background positions for each layer */
+  background-position: 
+    0 10%,    /* first image: 0px horizontally, 10% vertically */
+    0 100%,   /* second image: 0px horizontally, at the bottom */
+    0 50%,    /* third image: 0px horizontally, centered vertically */
+    0 100%,   /* fourth image: 0px horizontally, at the bottom */
+    0 0;      /* fifth image: 0px horizontally, at the top */
+  
+  /* Define the background sizes for each layer */
+  background-size: 
+    2500px,         /* first image */
+    800px,          /* second image */
+    500px 200px,    /* third image (width and height) */
+    1000px,         /* fourth image */
+    400px 260px;    /* fifth image (width and height) */
+  
+  /* Apply a continuous parallax animation over 50 seconds */
+  animation: 50s para infinite linear;
+}
+
+/* Keyframes for the parallax animation */
+@keyframes para {
+  100% {
+    background-position: 
+      -5000px 20%,   /* first image moves left */
+      -800px 95%,    /* second image moves left and changes vertical position */
+      500px 50%,     /* third image shifts horizontally */
+      1000px 100%,   /* fourth image moves further right */
+      400px 0;       /* fifth image stays relatively in place */
+  }
+}

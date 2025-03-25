@@ -1,0 +1,19 @@
+<!-- Container for the profile update form -->
+<div class="max-w-lg mx-auto my-8 p-6 bg-white rounded shadow">
+  <!-- Heading for the profile update section -->
+  <h2 class="text-center text-2xl font-bold mb-4">Modifier votre profil</h2>
+  
+  <!-- Form for updating the user's name -->
+  <form action="/profile" method="POST" class="space-y-4">
+    <div>
+      <!-- Label for the name input field -->
+      <label for="name" class="text-center block font-semibold">Prénom :</label>
+      <!-- Input field pre-filled with the current user's name -->
+      <input type="text" id="name" name="name" value="<%= @user.name %>" required class="text-center w-full p-2 border rounded">
+    </div>
+    <!-- Submit button to update the profile -->
+    <button type="submit" class="w-full bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition">
+      Mettre à jour
+    </button>
+  </form>
+</div>

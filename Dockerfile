@@ -1,20 +1,20 @@
-# Utilise l'image officielle Ruby
+# Use the official Ruby image as the base image
 FROM ruby:3.2
 
-# Définit le répertoire de travail
+# Set the working directory inside the container to /app
 WORKDIR /app
 
-# Copie le Gemfile et le Gemfile.lock s'ils existent
+# Copy the Gemfile and Gemfile.lock (if they exist) to the /app directory in the container
 COPY Gemfile* /app/
 
-# Installe les dépendances via Bundler
+# Install dependencies using Bundler
 RUN bundle install
 
-# Copie le reste du code
+# Copy the rest of the application's code into the container's /app directory
 COPY . /app
 
-# Expose le port 8080
+# Expose port 8080 so the container can communicate on that port
 EXPOSE 8080
 
-# Démarre l'application
+# Start the application by running app.rb using Ruby
 CMD ["ruby", "app.rb"]

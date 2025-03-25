@@ -1,1 +1,32 @@
-sdfdsfssf
+<!-- Container for centering the sign-up form with vertical padding and a light gray background -->
+<div class="flex items-center justify-center pt-16 pb-12 bg-gray-100">
+  <!-- Sign-up form card: full width up to a maximum width, white background, padding, rounded corners, and shadow -->
+  <div class="w-full max-w-md bg-white p-8 rounded shadow">
+    <!-- Heading for the sign-up form -->
+    <h2 class="text-2xl font-bold mb-6 text-center">Créer un compte</h2>
+
+    <% if @error %>
+      <!-- If an error message exists, display it in a red alert box -->
+      <p class="text-red-500 text-center mb-4"><%= @error %></p>
+    <% end %>
+
+    <!-- Sign-up form: sends a POST request to /signin -->
+    <form action="/signin" method="POST" class="space-y-4">
+      <!-- Input field for the user's name -->
+      <input type="text" name="name" placeholder="Nom" required class="w-full p-2 border border-gray-300 rounded">
+      <!-- Input field for the user's email -->
+      <input type="email" name="email" placeholder="Email" required class="w-full p-2 border border-gray-300 rounded">
+      <!-- Input field for the user's password -->
+      <input type="password" name="password" placeholder="Mot de passe" required class="w-full p-2 border border-gray-300 rounded">
+      <!-- Submit button to create the account -->
+      <button type="submit" class="w-full bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition">
+        S’inscrire
+      </button>
+    </form>
+
+    <!-- Link for users who already have an account to navigate to the login page -->
+    <p class="mt-4 text-center text-sm text-gray-600">
+      Déjà inscrit ? <a href="/login" class="text-blue-600 hover:underline">Se connecter</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<!-- Container for the header message -->
+<div class="flex items-center justify-center pt-10 pb-12">
+  <!-- Styled paragraph displaying the formatted date and mood prompt -->
+  <p class="bg-white/60 rounded-lg p-6 text-black text-center font-bold text-4xl" style="font-family: 'Boldonse', sans-serif;">
+    <%= formatted_date %><br>
+    <!-- Block element to add margin between the date and the prompt text -->
+    <span class="block mt-4">Quelle est votre humeur du jour ?</span>
+  </p>
+</div>
+
+<!-- Container for mood cards -->
+<div class="flex flex-wrap justify-center gap-4">
+  <% @latest_moods.each do |mood| %>
+    <% if mood.user %>  <%# Check that the mood is associated with an existing user %>
+      <!-- Each mood card displays the user's name and the chosen emoji -->
+      <div class="bg-white/80 rounded-lg shadow p-6 w-64">
+        <p class="text-xl font-bold text-center"><%= mood.user.name %></p>
+        <p class="text-6xl text-center"><%= mood.emoji %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
