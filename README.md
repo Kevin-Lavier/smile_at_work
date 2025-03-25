@@ -6,19 +6,6 @@ Cette page affiche la dernière humeur de chaque utilisateur pour la journée.
 
 ---
 
-## Table des matières
-
-- [Smile at Work 😊](#smile-at-work-)
-  - [Table des matières](#table-des-matières)
-  - [Fonctionnalités 🚀](#fonctionnalités-)
-  - [Prérequis 📋](#prérequis-)
-  - [Installation et configuration ⚙️](#installation-et-configuration-️)
-  - [Mise en place de la base de données 💾](#mise-en-place-de-la-base-de-données-)
-  - [Exécution de l'application 🏃](#exécution-de-lapplication-)
-  - [Déploiement sur Fly.io ☁️](#déploiement-sur-flyio-️)
-  - [Tâches Rake 🛠️](#tâches-rake-️)
-
----
 
 ## Fonctionnalités 🚀
 
